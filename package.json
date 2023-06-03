@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.1.0"
+    "concurrently": "^8.1.0",
+    "prettier": "^2.8.8"
   }
 }
