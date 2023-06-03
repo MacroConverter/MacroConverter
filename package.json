@@ -1,0 +1,17 @@
+{
+  "name": "macroconverter",
+  "version": "1.0.0",
+  "description": "Converts publically available recipes or generated recipes into macronutrients . .",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently 'cd client && yarn start' 'cd server && yarn run dev'",
+    "install:all": "cd client && yarn && cd ../server && yarn",
+    "install:client": "cd client && yarn",
+    "install:server": "cd server && yarn"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.1.0"
+  }
+}

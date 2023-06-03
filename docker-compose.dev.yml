@@ -1,0 +1,36 @@
+version: '0.1'
+
+services:
+  client:
+    container_name: macro-converter-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./client:/home/node/app
+    working_dir: /home/node/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+
+  server:
+    container_name: macro-converter-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: base
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./server/src:/home/node/backend/src
+      - ./server/nodemon.json:/home/node/backend/nodemon.json
+    ports:
+      - 8000:8000
+    expose:
+      - '8000'
+    command: npm run dev
+

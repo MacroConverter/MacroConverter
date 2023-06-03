@@ -1,0 +1,30 @@
+# This is for running like it's prod locally
+version: "3"
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    tty: true
+    stdin_open: true
+    ports:
+      - 8000:8000
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - server
+    tty: true
+    stdin_open: true
+    ports:
+      - "80:80"
+      - "443:443"
+
