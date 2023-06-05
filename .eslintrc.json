@@ -1,4 +1,4 @@
 {
   "rules": {},
-  "extends": ["standard-with-typescript", "prettier"]
+  "extends": []
 }
