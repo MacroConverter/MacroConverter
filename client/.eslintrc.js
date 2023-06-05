@@ -8,7 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    '../.eslintrc.json',
+    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
