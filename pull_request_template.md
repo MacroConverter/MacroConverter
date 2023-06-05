@@ -7,8 +7,11 @@ Also list if you add any new dependencies.
 Fixes # (issue/ticket number)
 
 ## Sample curl
+
 Ignore if PR does not affect an endpoint.
+
 ## Response
+
 Ignore if PR does not affect an endpoint.
 
 ## Type of change
