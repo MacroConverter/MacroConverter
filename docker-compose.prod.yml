@@ -1,5 +1,5 @@
 # This is for running like it's prod locally
-version: "3"
+version: '3'
 services:
   server:
     build:
@@ -25,6 +25,5 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "80:80"
-      - "443:443"
-
+      - '80:80'
+      - '443:443'
