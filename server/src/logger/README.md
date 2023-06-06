@@ -1,9 +1,9 @@
 # How To Use The Logger
 
 ```
-const loggerSetup = require('./logger');
+import { loggerSetup } from './logger';
 
-const logger = loggerSetup(\_\_dirname, 'AppName');
+const logger = loggerSetup(__dirname, 'AppName');
 
 logger.error('This is an error message');
 logger.warn('This is a warning message');
