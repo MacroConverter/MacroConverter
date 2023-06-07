@@ -10,8 +10,6 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "babel-plugin-named-exports-order": "^0.0.2",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -55,8 +53,7 @@
     "@storybook/react-webpack5": "^7.0.18",
     "@storybook/testing-library": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^9.1.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^35.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -64,6 +61,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
+    "prop-types": "^15.8.1",
     "storybook": "^7.0.18"
   }
 }
