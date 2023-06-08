@@ -6,14 +6,15 @@ const config: StorybookConfig = {
   // Required
   framework: {
     name: '@storybook/react-webpack5',
-    options: {}
+    options: {},
   },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   // Optional
-  addons: ['@storybook/addon-essentials'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-storysource'],
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
   },
-  staticDirs: ['../public']
+  staticDirs: ['../public'],
 };
+
 export default config;
