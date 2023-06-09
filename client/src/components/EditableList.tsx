@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 
 const EditableList = (
-  ingredients: Array<{
-    name: string;
-    protein: number;
-    fat: number;
-    carb: number;
-    calories: number;
-  }>,
+  ingredients: Array<{ name: string }>,
 ): React.ReactElement => {
-  const [ing, setIng] = useState(ingredients);
+  const [ing, setIng] = useState([]);
   const ingList = ing.map((item, index) => {
     return (
-      <div key={item.name}>
+      <div key={index}>
         <p>asdf</p>
-        <button></button>
+        <button
+          onClick={(): void => {
+            setIng([]);
+          }}
+        >
+          -
+        </button>
       </div>
     );
   });
