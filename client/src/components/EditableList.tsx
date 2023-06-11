@@ -1,24 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const EditableList = (
-  ingredients: Array<{ name: string }>,
-): React.ReactElement => {
-  const [ing, setIng] = useState([]);
-  const ingList = ing.map((item, index) => {
+interface Ingredient {
+  name: string;
+  protein: number;
+  fat: number;
+  carbs: number;
+  calories: number;
+}
+
+interface AppProps {
+  ingredients: Ingredient[];
+  onClick: () => void;
+}
+
+const EditableList = ({
+  ingredients,
+  onClick,
+}: AppProps): React.ReactElement => {
+  const ingList = ingredients.map((item) => {
     return (
-      <div key={index}>
-        <p>asdf</p>
+      <li key={item.name} style={{ display: 'flex' }}>
+        <p>{item.name}</p>
         <button
           onClick={(): void => {
-            setIng([]);
+            onClick();
           }}
         >
           -
         </button>
-      </div>
+      </li>
     );
   });
-  return <div>{ingList}</div>;
+  return (
+    <div>
+      <ul>{ingList}</ul>
+    </div>
+  );
 };
 
 export default EditableList;
