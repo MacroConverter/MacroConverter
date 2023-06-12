@@ -16,14 +16,14 @@ interface Ingredient {
 
 interface AppProps {
   ingredients: Ingredient[];
-  onClick: () => void;
+  onClick: (index: number) => void;
 }
 
 const EditableList = ({
   ingredients,
   onClick,
 }: AppProps): React.ReactElement => {
-  const ingList = ingredients.map((item) => {
+  const ingList = ingredients.map((item, index) => {
     return (
       <li key={item.name} className="flex-li">
         <p>{item.name}</p>
@@ -38,7 +38,7 @@ const EditableList = ({
         <div
           className="btn btn-primary"
           onClick={(): void => {
-            onClick();
+            onClick(index);
           }}
         >
           -
@@ -55,13 +55,7 @@ const EditableList = ({
           border: 'black solid 1px',
         }}
       >
-        <li
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}
-        >
+        <li className="flex-li">
           <p>name</p>
           <p>fat</p>
           <p>carbs</p>
