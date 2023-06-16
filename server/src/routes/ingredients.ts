@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { getWebIngredientsWrapper } from '../controllers/ingredientsCtrlr';
+
+import { getWebIngredientsWrapper } from '../controllers/ingredientCtrlr';
 
 const router = Router();
 
