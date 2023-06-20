@@ -31,7 +31,5 @@
       "./client/tsconfig.json"
     ]
   },
-  "dependencies": {
-    "winston": "^3.9.0"
-  }
+  "dependencies": {}
 }
