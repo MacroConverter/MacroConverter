@@ -1,6 +1,5 @@
 import express, { type Express, type Request, type Response } from 'express';
 import dotenv from 'dotenv';
-
 // Route imports
 import apiRoutes from './routes/macroApi';
 
@@ -8,6 +7,9 @@ dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT ?? '8000';
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server new value');
